@@ -154,10 +154,16 @@ a.spec-tag:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,
 .assess-btn:hover{background:rgba(255,255,255,.2) !important;}
 .assess-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:8px;background:white;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,.25);padding:16px;z-index:200;min-width:340px;max-width:500px;max-height:70vh;overflow-y:auto;}
 .assess-panel.open{display:block;}
-.assess-row.assess-next{background:#e8f5e9;font-weight:700;}
-.assess-row.assess-next td{color:#2e7d32;}
-.assess-row.assess-next td::first-child{position:relative;}
-.assess-next-marker{display:inline-block;font-size:10px;margin-right:4px;color:#43a047;}
+.assess-row.assess-next-y10{background:#e3f2fd;font-weight:700;}
+.assess-row.assess-next-y10 td{color:#1565c0;}
+.assess-row.assess-next-y11{background:#fff3e0;font-weight:700;}
+.assess-row.assess-next-y11 td{color:#e65100;}
+.assess-next-marker{display:inline-block;font-size:10px;margin-right:4px;}
+.assess-next-y10 .assess-next-marker{color:#1e88e5;}
+.assess-next-y11 .assess-next-marker{color:#fb8c00;}
+.assess-yg-label{display:inline-block;font-size:9px;font-weight:700;padding:1px 5px;border-radius:8px;margin-left:6px;vertical-align:middle;}
+.assess-next-y10 .assess-yg-label{background:#bbdefb;color:#1565c0;}
+.assess-next-y11 .assess-yg-label{background:#ffe0b2;color:#e65100;}
 .assess-subject{margin-bottom:12px;}
 .assess-subject:last-child{margin-bottom:0;}
 .assess-subject-title{font-weight:700;font-size:13px;margin-bottom:6px;padding-bottom:4px;border-bottom:2px solid #eee;}
@@ -2627,7 +2633,7 @@ Lab Book: Pages 48–50</div><div class="info-scroll"><div class="student-sectio
   </div>
 </div>
 <footer class="site-footer">
-  <span>Updated 15 Apr 2026 14:24</span>
+  <span>Updated 15 Apr 2026 14:29</span>
 </footer>
 <script>
 const tabs = document.querySelectorAll('.nav-tab');
@@ -2846,20 +2852,23 @@ function switchAssessTab(btn) {
   btn.closest('.assess-panel').querySelectorAll('.assess-tab-panel').forEach(p => p.style.display = 'none');
   document.getElementById('assess-' + key).style.display = '';
 }
-/* Highlight next upcoming test per year group (Y10 tests 1-4, Y11 tests 5+) */
+/* Highlight next upcoming test per year group (Y10=blue tests 1-4, Y11=orange tests 5+) */
 (function() {
   const today = new Date().toISOString().slice(0,10);
   document.querySelectorAll('.assess-table').forEach(table => {
-    ['y10','y11'].forEach(yg => {
-      // Collect rows for this year group, sort by start date
+    [['y10','Year 10'],['y11','Year 11']].forEach(([yg, label]) => {
+      const cls = 'assess-next-' + yg;
       const rows = [...table.querySelectorAll(`.assess-row[data-yg="${yg}"]`)]
         .sort((a,b) => (a.dataset.start||'').localeCompare(b.dataset.start||''));
       for (const row of rows) {
         const end = row.dataset.end || row.dataset.start;
         if (end && end >= today) {
-          row.classList.add('assess-next');
+          row.classList.add(cls);
           const firstTd = row.querySelector('td');
-          if (firstTd) firstTd.innerHTML = '<span class="assess-next-marker">&#9654;</span>' + firstTd.textContent;
+          if (firstTd) firstTd.innerHTML =
+            '<span class="assess-next-marker">&#9654;</span>' +
+            firstTd.textContent +
+            '<span class="assess-yg-label">' + label + '</span>';
           break;
         }
       }
