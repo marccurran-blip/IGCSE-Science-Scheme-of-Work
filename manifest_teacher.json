@@ -1,0 +1,1 @@
+{ "name": "Teacher Edition", "short_name": "Teacher", "start_url": "/index.html", "display": "standalone", "background_color": "#ffffff", "theme_color": "#0D47A1", "icons": [{ "src": "icon_teacher.svg", "sizes": "192x192", "type": "image/svg+xml" }] }

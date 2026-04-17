@@ -1,5 +1,5 @@
 // Service Worker for Student Edition
-const CACHE_NAME = 'sow-student-v1776303597';
+const CACHE_NAME = 'sow-student-v1776430074';
 const URLS_TO_CACHE = ['./Science_Scheme_of_Work.html'];
 
 self.addEventListener('install', function(event) {

@@ -1,5 +1,5 @@
 // Service Worker for Teacher Edition
-const CACHE_NAME = 'sow-teacher-v1776303597';
+const CACHE_NAME = 'sow-teacher-v1776430074';
 const URLS_TO_CACHE = ['./Science_Scheme_of_Work_TEACHER.html'];
 
 self.addEventListener('install', function(event) {
