@@ -1,0 +1,42 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="studentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b5e35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d3d6e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="120" ry="120" fill="url(#studentGradient)"/>
+
+  <!-- Open book symbol -->
+  <g transform="translate(256, 280)">
+    <!-- Left page -->
+    <path d="M -80 -60 L -20 -60 L -10 60 L -90 60 Z" fill="rgba(255,255,255,0.9)" filter="url(#shadow)"/>
+    <!-- Right page -->
+    <path d="M 20 -60 L 80 -60 L 90 60 L 10 60 Z" fill="white" filter="url(#shadow)"/>
+    <!-- Book spine -->
+    <rect x="-3" y="-60" width="6" height="120" fill="rgba(255,255,255,0.6)"/>
+  </g>
+
+  <!-- Atom/Beaker symbol at top -->
+  <g transform="translate(256, 140)">
+    <!-- Beaker outline -->
+    <path d="M -30 -40 L -25 40 Q -25 50 -15 50 L 15 50 Q 25 50 25 40 L 30 -40 Z"
+          fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Liquid inside beaker -->
+    <path d="M -20 0 Q -20 40 -10 45 L 10 45 Q 20 40 20 0 Z" fill="rgba(255,255,255,0.4)"/>
+    <!-- Beaker handle -->
+    <path d="M 30 -10 Q 50 5 50 25 Q 50 45 30 45"
+          fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+    <!-- Molecules inside -->
+    <circle cx="-8" cy="15" r="3" fill="white"/>
+    <circle cx="0" cy="25" r="3" fill="white"/>
+    <circle cx="8" cy="18" r="3" fill="white"/>
+    <line x1="-8" y1="15" x2="0" y2="25" stroke="white" stroke-width="1.5"/>
+    <line x1="0" y1="25" x2="8" y2="18" stroke="white" stroke-width="1.5"/>
+  </g>
+</svg>

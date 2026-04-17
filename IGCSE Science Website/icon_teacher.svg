@@ -1,0 +1,54 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="teacherGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="120" ry="120" fill="url(#teacherGradient)"/>
+
+  <!-- Graduation cap (mortarboard) at top -->
+  <g transform="translate(256, 130)">
+    <!-- Cap board (flat top) -->
+    <path d="M -60 0 L 60 0 L 50 15 L -50 15 Z" fill="white" filter="url(#shadow)"/>
+    <!-- Cap center -->
+    <circle cx="0" cy="0" r="8" fill="white"/>
+    <!-- Tassel -->
+    <line x1="0" y1="8" x2="0" y2="50" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="55" r="6" fill="white"/>
+    <!-- Decorative curves on cap -->
+    <path d="M -40 5 Q -30 12 -20 5" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 20 5 Q 30 12 40 5" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Open book/teaching symbol below -->
+  <g transform="translate(256, 310)">
+    <!-- Left page -->
+    <path d="M -75 -50 L -15 -50 L -5 50 L -85 50 Z" fill="rgba(255,255,255,0.85)" filter="url(#shadow)"/>
+    <!-- Right page -->
+    <path d="M 15 -50 L 75 -50 L 85 50 L 5 50 Z" fill="white" filter="url(#shadow)"/>
+    <!-- Book spine -->
+    <rect x="-3" y="-50" width="6" height="100" fill="rgba(255,255,255,0.6)"/>
+
+    <!-- Lines representing text on left page -->
+    <line x1="-65" y1="-25" x2="-25" y2="-25" stroke="rgba(26, 26, 46, 0.3)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-65" y1="-5" x2="-35" y2="-5" stroke="rgba(26, 26, 46, 0.3)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-65" y1="15" x2="-40" y2="15" stroke="rgba(26, 26, 46, 0.3)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Lines representing text on right page -->
+    <line x1="25" y1="-25" x2="65" y2="-25" stroke="rgba(26, 26, 46, 0.3)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="25" y1="-5" x2="65" y2="-5" stroke="rgba(26, 26, 46, 0.3)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="25" y1="15" x2="60" y2="15" stroke="rgba(26, 26, 46, 0.3)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Small decoration lines -->
+  <g stroke="rgba(255,255,255,0.15)" stroke-width="2">
+    <line x1="80" y1="80" x2="120" y2="120"/>
+    <line x1="432" y1="392" x2="472" y2="432"/>
+  </g>
+</svg>

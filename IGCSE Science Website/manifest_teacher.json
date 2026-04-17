@@ -1,0 +1,52 @@
+{
+  "name": "IGCSE Science SoW \u2014 Teacher",
+  "short_name": "SoW Teacher",
+  "description": "IGCSE Science Scheme of Work \u2014 Teacher Edition",
+  "start_url": "./Science_Scheme_of_Work_TEACHER.html",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#1a1a2e",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icons/teacher-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/teacher-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/teacher-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/teacher-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/teacher-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/teacher-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/teacher-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/teacher-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
